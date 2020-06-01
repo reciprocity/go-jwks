@@ -9,7 +9,7 @@ A Go library to retrieve RSA public keys from a JWKS (JSON Web Key Set) endpoint
 Using [Go modules](https://github.com/golang/go/wiki/Modules)
 
 ```bash
-go get github.com/s12v/go-jwks@v0.2.0
+go get github.com/reciprocity/go-jwks@v0.2.0
 ```
 
 ## Dependencies
@@ -28,7 +28,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/s12v/go-jwks"
+	"github.com/reciprocity/go-jwks"
 	"gopkg.in/square/go-jose.v2"
 )
 
