@@ -2,10 +2,11 @@ package jwks
 
 import (
 	"fmt"
-	"github.com/square/go-jose"
-	"golang.org/x/sync/semaphore"
 	"log"
 	"time"
+
+	"golang.org/x/sync/semaphore"
+	"gopkg.in/square/go-jose.v2"
 )
 
 type JWKSClient interface {

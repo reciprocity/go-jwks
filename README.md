@@ -14,7 +14,7 @@ go get github.com/s12v/go-jwks@v0.2.0
 
 ## Dependencies
 
- * `github.com/square/go-jose` - JWT library
+ * `gopkg.in/square/go-jose.v2` - JWT library
  * `github.com/patrickmn/go-cache` - default in-memory cache
 
 ## Example
@@ -25,10 +25,11 @@ go get github.com/s12v/go-jwks@v0.2.0
 package main
 
 import (
-	"github.com/s12v/go-jwks"
-	"github.com/square/go-jose"
-	"time"
 	"log"
+	"time"
+
+	"github.com/s12v/go-jwks"
+	"gopkg.in/square/go-jose.v2"
 )
 
 func main() {
@@ -61,8 +62,8 @@ Log:
 ### Key refresh and TTL
 
 There are two caching parameters:
- - `refresh` - the key will be fetched from the source after this interval 
- - `ttl` - if not used, the key will be deleted from cache 
+ - `refresh` - the key will be fetched from the source after this interval
+ - `ttl` - if not used, the key will be deleted from cache
 
 On the first request, the key is synchronously fetched from the key server and stored in the cache.
 On the next request after `refresh` interval, the key will be refreshed in the background (not affect response time).
